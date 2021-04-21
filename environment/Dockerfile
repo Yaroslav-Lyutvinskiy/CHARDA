@@ -1,10 +1,11 @@
-# hash:sha256:c32b9772cbc99e6217b01eb7307d5f1690ea90ad37c280608c0eadfb3b8b17b1
+# hash:sha256:177b3e7bfddfe5572b81186f886a48680e43a2328cfff5cdf78dd7f1af42cc8e
 FROM registry.codeocean.com/codeocean/miniconda3:4.8.2-python3.8-ubuntu18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN conda install -y \
         h5py==2.10.0 \
+        jupyter \
         jupyterlab==3.0.11 \
         matplotlib==3.3.4 \
         numpy==1.19.2 \
