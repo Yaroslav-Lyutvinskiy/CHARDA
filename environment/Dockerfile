@@ -1,11 +1,11 @@
-# hash:sha256:177b3e7bfddfe5572b81186f886a48680e43a2328cfff5cdf78dd7f1af42cc8e
+# hash:sha256:c18ce069c5bdfefa2a4c042a63a12c58e738fc373874a66855940235e10972ed
 FROM registry.codeocean.com/codeocean/miniconda3:4.8.2-python3.8-ubuntu18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN conda install -y \
         h5py==2.10.0 \
-        jupyter \
+        jupyter==1.0.0 \
         jupyterlab==3.0.11 \
         matplotlib==3.3.4 \
         numpy==1.19.2 \
@@ -15,5 +15,6 @@ RUN conda install -y \
     && conda clean -ya
 
 RUN pip install -U --no-cache-dir \
+    configobj \
     isospecpy==2.1.4 \
     pyopenms==2.6.0
