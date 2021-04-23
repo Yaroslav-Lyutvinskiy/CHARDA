@@ -1,4 +1,4 @@
-# hash:sha256:c18ce069c5bdfefa2a4c042a63a12c58e738fc373874a66855940235e10972ed
+# hash:sha256:49392ee53198359be91cac2e16606390c4dee673da28a3d5d6c309c54e38e822
 FROM registry.codeocean.com/codeocean/miniconda3:4.8.2-python3.8-ubuntu18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -15,6 +15,7 @@ RUN conda install -y \
     && conda clean -ya
 
 RUN pip install -U --no-cache-dir \
-    configobj \
+    configobj==5.0.6 \
     isospecpy==2.1.4 \
+    jdc==0.0.9 \
     pyopenms==2.6.0
