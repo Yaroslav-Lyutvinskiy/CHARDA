@@ -3,4 +3,4 @@ set -ex
 
 # This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
 
-jupyter nbconvert  --ExecutePreprocessor.allow_errors=True  --ExecutePreprocessor.timeout=-1   --FilesWriter.build_directory=../results   --execute notebook.ipynb
+jupyter nbconvert  --to html --ExecutePreprocessor.allow_errors=True  --ExecutePreprocessor.timeout=-1   --FilesWriter.build_directory=../results   --execute Charda.ipynb
